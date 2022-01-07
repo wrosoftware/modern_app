@@ -1,0 +1,21 @@
+application:
+  name: '@project.name@'
+  version: '@project.version@'
+  description: '@project.description@'
+
+server:
+  port: 8080
+  servlet:
+    context-path: '/api'
+
+spring:
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  profiles:
+    active: dev
